@@ -15,6 +15,7 @@ initializing a shared memory section for amount of money in the box.
 These processes will increase the amount of money in the box. Half of
 these processes increase the money by 10, and the other half increase the money by 15.
 Number of increaser processes are always even.
+
 **Decreaser Process:**
 
 These processes will decrease the amount of money in the box. Each
