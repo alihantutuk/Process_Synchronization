@@ -1,6 +1,5 @@
 /*
  *Mehmet Ali Han Tutuk
- *150160106
  *In Linux Mint terminal
  *Compile: gcc -Wall -Werror 150160106.c
 */
@@ -29,6 +28,16 @@ void sem_signal(int semid, int val);
 int fib(int n);
 
 
+
+/*
+        -*- COMMAND LINE ARGUMENTS EXPLANATION -*-
+   N: The amount of money that needs to be stored in the moneybox before decreaser
+      processes start working.
+• ni: Number of increaser processes.
+• nd: Number of decreaser processes.
+• ti: Amount of turns the increaser processes will run before decreasers start working.
+• td: Amount of turns the decreaser processes will run before increasers start working.
+*/
 int main(int argc, char **argv){
     if(argc<0){
         printf("Error!\n");
