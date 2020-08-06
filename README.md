@@ -2,18 +2,21 @@
 
 Multiple increaser and and decreaser processes working synchronically like producer/consumer problem. 
 
-#Master Process: 
+**Master Process:**
+
 Reads the command line arguments, creates increaser and decreaser (even
 though these will not work at the start, they will exist in the memory waiting their turn)
 processor at the start of the program, and keeps the program working until all children
 (increaser and decreaser) processes finish their work. This process is also responsible for
 initializing a shared memory section for amount of money in the box. 
 
-#Increaser Process:
+**Increaser Process:**
+
 These processes will increase the amount of money in the box. Half of
 these processes increase the money by 10, and the other half increase the money by 15.
 Number of increaser processes are always even.
-#Decreaser Process:
+**Decreaser Process:**
+
 These processes will decrease the amount of money in the box. Each
 decreaser process works with its own fibonacci numbers independent of other decreasers.
 First decrement starts with the first fibonacci number (starts from 1, not 0), and the next
@@ -24,7 +27,7 @@ number. Again, number of decreaser processes are always even. If the amount of m
 being decreased is greater than or equal to the amount of money in the box, decreaser
 process will signal master process to stop and kill all children.
 
-#Working Order of the Processes
+**Working Order of the Processes**
 • Initially, only increaser processes will change amount of money in the moneybox.
 • After enough money is stored in the box, increaser and decreaser processes will work in
 turns. Increaser process will work for ti turns consecutively, then decreaser processes will
